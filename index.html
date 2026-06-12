@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma de registro y gestión de usuarios. Únete a nuestra comunidad hoy mismo para disfrutar de beneficios exclusivos.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Estudiante">
+    <title>Taller Automotriz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Diseño.css/Style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Taller Automotriz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Ingresados.html">Ingresos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center text-light d-flex align-items-center" style="background: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 80vh;">
+        <div class="container bg-dark bg-opacity-50 p-5 rounded">
+            <h1 class="display-3 fw-bold">Taller Automotriz Service</h1>
+            <p class="lead">El mejor servicio técnico y mantenimiento para tu motocicleta.</p>
+            <button type="button" class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#registerModal">
+                Registrar Ingreso
+            </button>
+        </div>
+    </header>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Registro de Ingreso al Taller</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre del Cliente</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">Por favor ingresa un nombre válido (solo letras, 3 a 50 caracteres).</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="placa" class="form-label">Placa de la Moto (Ej: ABC12D)</label>
+                            <input type="text" class="form-control" id="placa" style="text-transform: uppercase;" required>
+                            <div class="invalid-feedback">Ingresa una placa válida (3 letras, 2 números y 1 letra/número final).</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono (10 dígitos)</label>
+                            <input type="text" class="form-control" id="phone" required>
+                            <div class="invalid-feedback">El teléfono debe contener exactamente 10 dígitos numéricos.</div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">Ingresar Moto</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="Funcionalidad.js/Main.js"></script>
+
+</body>
+</html>
